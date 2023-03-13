@@ -1,0 +1,6 @@
+svg path{
+  fill: white;
+}
+span svg path{
+  fill: darkorange;
+}
