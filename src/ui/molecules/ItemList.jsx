@@ -7,7 +7,7 @@ const ItemOfList = (props) => {
   const { userAvatar, userName, starReview, textReview, product, amount, qty, month, revenue } =
     props;
   return (
-    <div className="flex mb-4 max-w-[300px]">
+    <div className="flex mb-4 max-w-[300px] border-b border-blue-200 border-solid">
       {userAvatar}
       <div className="star mr-4">
         {starReview}

@@ -32,6 +32,39 @@ const orders = [
       qtyProducts: 1,
     },
   },
+  {
+    id: 3,
+    name: "Stefa Swenki",
+    // avatarImg: "https://faces-img.xcdn.link/image-lorem-face-5742.jpg",
+    type: "orders",
+    extra: {
+      products: "Samsung Galaxy A53",
+      amount: 430,
+      qtyProducts: 1,
+    },
+  },
+  {
+    id: 3,
+    name: "Stefa Swenki",
+    // avatarImg: "https://faces-img.xcdn.link/image-lorem-face-5742.jpg",
+    type: "orders",
+    extra: {
+      products: "Samsung Galaxy A53",
+      amount: 430,
+      qtyProducts: 1,
+    },
+  },
+  {
+    id: 3,
+    name: "Stefa Swenki",
+    // avatarImg: "https://faces-img.xcdn.link/image-lorem-face-5742.jpg",
+    type: "orders",
+    extra: {
+      products: "Samsung Galaxy A53",
+      amount: 430,
+      qtyProducts: 1,
+    },
+  },
 ];
 
 export default orders;

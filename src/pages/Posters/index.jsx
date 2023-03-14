@@ -17,28 +17,23 @@ import revenue from "../../utils/mockRevenue";
 import Button from "../../ui/atoms/Button";
 
 const Posters = () => {
-  const [buttonName, setBtnName] = useState("");
+  const [categoryValue, setCategoryValue] = useState({
+    revenue: "",
+    orders: "",
+    reviews: "",
+    customers: "",
+  });
 
-  const [revenueBtnName, setRevenueBtnName] = useState("");
-  const handleRevenueBtnName = (e) => {
-    revenueBtnName === "" ? setRevenueBtnName(e.target.name) : setRevenueBtnName("");
-  };
-
-  const [reviewsBtnName, setReviewsBtnName] = useState("");
-  const handleReviewsBtnName = (e) => {
-    reviewsBtnName === "" ? setReviewsBtnName(e.target.name) : setReviewsBtnName("");
-  };
-
-  const [ordersBtnName, setOrderBtnName] = useState("");
-  const handleOrdersBtnName = (e) => {
-    ordersBtnName === "" ? setOrderBtnName(e.target.name) : setOrderBtnName("");
-  };
-
-  const handleButton = (e) => {
+  const handleCategoryValue = (e) => {
     console.log(e.target.name);
-    buttonName === "" ? setBtnName(e.target.name) : setBtnName("");
+    console.log(e.target.value);
+    categoryValue[e.target.name] === ""
+      ? setCategoryValue((prevCategoryValue) => ({
+          ...prevCategoryValue,
+          [e.target.name]: e.target.value,
+        }))
+      : setCategoryValue((prevCategoryValue) => ({ ...prevCategoryValue, [e.target.name]: "" }));
   };
-  console.log(buttonName);
 
   return (
     <div className="px-4 mx-auto">
@@ -52,10 +47,11 @@ const Posters = () => {
           />
           <Button
             name="revenue"
-            textBtn={revenueBtnName === "revenue" ? "hide result" : "show result"}
-            handleBtn={handleRevenueBtnName}
+            value="revenue"
+            handleBtn={handleCategoryValue}
+            textBtn={categoryValue.revenue === "revenue" ? "hide result" : "show result"}
           />
-          {revenueBtnName === "revenue" && <ListOfItems list={revenue} />}
+          {categoryValue.revenue === "revenue" && <ListOfItems list={revenue} />}
         </div>
 
         {/* ====== orders ========= */}
@@ -67,10 +63,12 @@ const Posters = () => {
           />
           <Button
             name="orders"
-            handleBtn={handleOrdersBtnName}
-            textBtn={ordersBtnName === "orders" ? "hide result" : "show result"}
+            value="orders"
+            handleBtn={handleCategoryValue}
+            // handleBtn={handleOrdersBtnName}
+            textBtn={categoryValue.orders === "orders" ? "hide result" : "show result"}
           />
-          {ordersBtnName === "orders" && <ListOfItems list={orders} />}
+          {categoryValue.orders === "orders" && <ListOfItems list={orders} />}
         </div>
 
         {/* ======  reviews ========= */}
@@ -82,10 +80,11 @@ const Posters = () => {
           />
           <Button
             name="reviews"
-            handleBtn={handleReviewsBtnName}
-            textBtn={reviewsBtnName === "reviews" ? "hide result" : "show result"}
+            value="reviews"
+            handleBtn={handleCategoryValue}
+            textBtn={categoryValue.reviews === "reviews" ? "hide result" : "show result"}
           />
-          {reviewsBtnName === "reviews" && <ListOfItems list={reviews} />}
+          {categoryValue.reviews === "reviews" && <ListOfItems list={reviews} />}
         </div>
 
         {/* ======= customers ====== */}
@@ -96,11 +95,12 @@ const Posters = () => {
             children={<BgIconBox bgColor="lightGreen" icon={<Icon faIcon={faUserPlus} />} />}
           />
           <Button
-            handleBtn={handleButton}
             name="customers"
-            textBtn={buttonName === "customers" ? "hide result" : "show result"}
+            value="customers"
+            handleBtn={handleCategoryValue}
+            textBtn={categoryValue.customers === "customers" ? "hide result" : "show result"}
           />
-          {buttonName === "customers" && <ListOfItems list={customers} />}
+          {categoryValue.customers === "customers" && <ListOfItems list={customers} />}
         </div>
       </div>
     </div>

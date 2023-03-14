@@ -23,6 +23,14 @@ const reviews = [
     type: "reviews",
     star: "faStar",
   },
+  {
+    id: 2,
+    name: "Luis Cordoba",
+    avatarImg: "https://faces-img.xcdn.link/image-lorem-face-6646.jpg",
+    text: "This extension permits matching brackets to be known with colors... ",
+    type: "reviews",
+    star: "faStar",
+  },
 ];
 
 export default reviews;
