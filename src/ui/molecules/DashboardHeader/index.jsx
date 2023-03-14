@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const DashboardHeader = ({ title, value, children }) => {
   return (
-    <div className="flex justify-between w-[300px] mb-4 px-5 py-5 shadow-md cursor-pointer">
+    <div className="flex justify-between w-[300px] mb-4 px-5 py-5 bg-sky-100 shadow-md cursor-pointer">
       {children}
       <div className="flex flex-col self-end">
         <h2>{title}</h2>

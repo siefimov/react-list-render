@@ -36,7 +36,7 @@ const Posters = () => {
   };
 
   return (
-    <div className="px-4 mx-auto">
+    <div className="px-4 mx-auto mt-5">
       <div className="flex gap-4 max-w-screen-xl mx-auto">
         {/* ====== revenue ========= */}
         <div>

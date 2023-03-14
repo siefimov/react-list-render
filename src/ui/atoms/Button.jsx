@@ -7,7 +7,7 @@ const Button = ({ name, value, handleBtn, textBtn }) => {
       <button
         name={name}
         value={value}
-        className="btn w-full border-sky-800 border border-solid mb-4 py-2 rounded-lg hover:bg-sky-200"
+        className="btn w-full border-sky-800 border border-solid mb-4 py-2 rounded-lg hover:bg-sky-100"
         onClick={handleBtn}
       >
         {textBtn}
