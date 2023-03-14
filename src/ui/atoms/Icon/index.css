@@ -1,6 +1,6 @@
 svg path{
   fill: white;
 }
-span svg path{
+.star svg path{
   fill: darkorange;
 }
