@@ -6,7 +6,7 @@ const UserName = ({ name }) => {
 };
 
 UserName.propTypes = {
-  name: PropTypes.string.isRequired,
+  name: PropTypes.string,
 };
 
 UserName.defaulProps = {

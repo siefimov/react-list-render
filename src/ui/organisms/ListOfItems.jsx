@@ -4,7 +4,6 @@ import ItemOfList from "../molecules/ItemList";
 import UserAvatar from "../atoms/UserAvatar";
 import UserName from "../atoms/UserName";
 import StarReview from "../atoms/StarReview";
-import Icon from "../atoms/Icon";
 
 const ListOfItems = ({ list }) => {
   return list.map((item) => (
@@ -27,6 +26,8 @@ const ListOfItems = ({ list }) => {
   ));
 };
 
-ListOfItems.propTypes = {};
+ListOfItems.propTypes = {
+  list: PropTypes.array.isRequired,
+};
 
 export default ListOfItems;
