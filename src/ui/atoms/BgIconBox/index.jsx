@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const BgIconBox = ({ bgColor, children }) => {
+const BgIconBox = ({ bgColor, icon }) => {
   const bgColorVariant = {
     darkCyan: "bg-[#0369A1]",
     orange: "bg-[#FFA500]",
@@ -13,14 +13,18 @@ const BgIconBox = ({ bgColor, children }) => {
     <div
       className={`${bgColorVariant[bgColor]} w-16 h-20 rounded flex items-center justify-center`}
     >
-      {children}
+      {icon}
     </div>
   );
 };
 
 BgIconBox.propTypes = {
   bgColor: PropTypes.string.isRequired,
-  children: PropTypes.elementType,
+  icon: PropTypes.element,
+};
+
+BgIconBox.defaultProp = {
+  icon: "",
 };
 
 export default BgIconBox;

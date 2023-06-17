@@ -5,6 +5,8 @@ const TextReview = ({ text }) => {
   return <div>{text}</div>;
 };
 
-TextReview.propTypes = {};
+TextReview.propTypes = {
+  text: PropTypes.string,
+};
 
 export default TextReview;
